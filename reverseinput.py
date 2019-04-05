@@ -1,6 +1,7 @@
 # Name: Cw & Jpeezy
 # Project: User inputs a string and flips it in reverse and more...?
-
+# Project Definitions: Reverse: Backwards string
+#		       Alternate: "DEFINE ALTERNATE HERE"
 ##########
 # GLOBAL #
 ##########
@@ -67,17 +68,17 @@ type(text) # User inputs a string to be reversed
 
 # Let's reverse THIS
 
-textReversed = _TEXT_MANAGER.reverseText(text) # Reverse string variable
+textReversed = _TEXT_MANAGER.reverseText(text) # Reverse string variable (We technically don't need the variable unless we are using it)
 
 print(textReversed) # Print the reversed string in the terminal
 
 text = "" # RESET
 
-text = input('What would you like to alternate: ') # This is the string to be alternated taken from clipboard
+text = input('What would you like to alternate: ') # This is the string to be alternated 
 type(text) # User inputs a string to be alternated
 
 # Let's alternate THIS
 
-textAlternate = _TEXT_MANAGER.alternateText(text) # Alternated string variable
+textAlternate = _TEXT_MANAGER.alternateText(text) # Alternated string variable (We technically don't need the variable unless we are using it)
 
-print(textAlternate) # Print the alternated string in the terminal
+print(_TEXT_MANAGER.alternateText(text)) # Print the alternated string in the terminal
