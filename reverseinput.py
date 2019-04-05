@@ -1,7 +1,7 @@
 # Name: Cw & Jpeezy
 # Project: User inputs a string and flips it in reverse and more...?
 # Project Definitions: Reverse: Backwards string
-#		       Alternate: "DEFINE ALTERNATE HERE"
+#		               Alternate: Alternates between lowercase and uppercase characters
 ##########
 # GLOBAL #
 ##########
@@ -12,73 +12,86 @@
 # CLASSES #
 ###########
 
-class _TEXT_MANAGER: # I like to use the "_" prefix to distinguish classes and modules, do you like this naming convention?
+class __MODULE_NAME: # I like to use the "__" & "_" prefix to distinguish classes & modules, do you like this naming convention?
 
+	class _TEXT_MANAGER: 
+
+		# INIT #
+
+		textOutput = ""
+
+		# FUNCTIONS #
+
+		def reverseText(self, string):
+			r = ""
+
+			# Create a decrementing for loop that starts from the full length - 1
+			for i in range((int(len(string) - 1) ),-1 ,-1): # Iterate in reverse through string
+				r += string[i] # textrev = previous characters + new character
+
+			#text
+
+			# Return the backwards text
+			self.textOutput = r
+			return r
+
+		def alternateText(self, string):
+			r = ""
+			c = 0
+
+			# Loop through letters & alternate them
+			for i in string:
+				if c % 2 == 0: # We could do this without a counter, and probably should be, but im lazy right now so - !!FIX ME LATER!!
+					r += i.upper()
+				else:
+					r += i.lower()
+
+				c += 1
+
+			# Return the alternated text
+			self.textOutput = r
+			return r
+
+	########
 	# INIT #
+	########
+
+	_TEXT_MANAGER = _TEXT_MANAGER() # Create the text manager object
+
+	#############
+	# FUNCTIONS #
+	#############
 
 	pass # Placeholder
 
-	# FUNCTIONS #
+	##########
+	# EVENTS #
+	##########
 
-	def reverseText(self, string):
-		textReturn = ""
+	if __name__ == "__main__": # Only run events when script ran directly (we can just access objects if we need to)
 
-		# Create a decrementing for loop that starts from the full length - 1
-		for i in range((int(len(string) - 1) ),-1 ,-1): # Iterate in reverse through string
-			textReturn += string[i] # textrev = previous characters + new character
+		# Temp Comment Block, Testing Classes
+		#
+		# text = input('What would you like to reverse: ') # This is the string to be reversed
+		# type(text) # User inputs a string to be reversed
 
-		# Return the backwards text
-		return textReturn
+		# # Let's reverse THIS
 
-	def alternateText(self, string):
-		textReturn = ""
-		c = 0
+		# print(_TEXT_MANAGER.reverseText(text)) # Print the reversed string in the terminal
 
-		# Loop through letters & alternate them
-		for i in string:
-			if c % 2 == 0: # We could do this without a counter, and probably should be, but im lazy right now so - !!FIX ME LATER!!
-				textReturn += i.upper()
-			else:
-				textReturn += i.lower()
+		# text = "" # RESET
 
-			c += 1
+		# text = input('What would you like to alternate: ') # This is the string to be alternated 
+		# type(text) # User inputs a string to be alternated
 
-		# Return the alternated text
-		return textReturn
+		# # Let's alternate THIS
 
+		# textAlternate = _TEXT_MANAGER.alternateText(text) # Alternated string variable (We technically don't need the variable unless we are using it)
 
-########
-# INIT #
-########
+		# print(_TEXT_MANAGER.alternateText(text)) # Print the alternated string in the terminal
 
-_TEXT_MANAGER = _TEXT_MANAGER() # Create the text manager object
+		text = input('What would you like to reverse: ')
+		type(text)
 
-#############
-# FUNCTIONS #
-#############
-
-pass # Placeholder
-
-##########
-# EVENTS #
-##########
-
-text = input('What would you like to reverse: ') # This is the string to be reversed taken from clipboard
-type(text) # User inputs a string to be reversed
-
-# Let's reverse THIS
-
-textReversed = _TEXT_MANAGER.reverseText(text) # Reverse string variable (We technically don't need the variable unless we are using it)
-
-print(textReversed) # Print the reversed string in the terminal
-
-text = "" # RESET
-
-text = input('What would you like to alternate: ') # This is the string to be alternated 
-type(text) # User inputs a string to be alternated
-
-# Let's alternate THIS
-
-textAlternate = _TEXT_MANAGER.alternateText(text) # Alternated string variable (We technically don't need the variable unless we are using it)
-
-print(_TEXT_MANAGER.alternateText(text)) # Print the alternated string in the terminal
+		_TEXT_MANAGER.reverseText(text)
+		print(_TEXT_MANAGER.textOutput)
