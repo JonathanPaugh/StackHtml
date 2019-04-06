@@ -9,45 +9,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
+<head>
 
-		<meta charset="utf-8">
-		<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'>
-		<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
-		<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
-		<title>JAPE_SLANG</title>
+	<meta charset="utf-8">
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'>
+	<link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="/assets/css/main.css" rel="stylesheet" type="text/css">
+	<title>JAPE_SLANG</title>
 
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<div class="main">
-			
-			<div class="section-text">
-				
-				<div class="container-fluid h-100">
-					
-					<div class="row h-100 justify-content-center align-items-center">
-					
-						<div class="col-2">
-							
-							<input class="input-text">
-								
-						</div>
-						
+	<div class="main">
+
+		<div class="section-text">
+
+			<div class="container-fluid h-100">
+
+				<div class="row h-100 justify-content-center align-items-center">
+
+					<div class="col-2">
+
+						<input class="input-text">
+
 					</div>
-				
+
 				</div>
-			
+
 			</div>
 
 		</div>
 
-	</body>
+	</div>
 
-	<!--SCRIPT CORE-->
-	<script src="/assets/js/jquery-3.3.1.min.js"></script>
+</body>
 
-	<!--SCRIPT LIBRARY-->
+<!--SCRIPT CORE-->
+<script src="/assets/js/jquery-3.3.1.min.js"></script>
+
+<!--SCRIPT LIBRARY-->
+<script>
+//IM AN INLINE SCRIPT LETS DO SOME JQUERY!
+	
+$(document).ready(function(){ // Activate jquery
+		alert("Hello, world!"); // Say hello world with javascript alert function (there is not point of jquery yet...)
+	  });
+
+</script>
 
 </html>
