@@ -14,7 +14,7 @@
 
 class __MODULE_NAME: # I like to use the "__" & "_" prefix to distinguish classes & modules, do you like this naming convention?
 
-	class _TEXT_MANAGER: 
+	class _TEXT_MANAGER:
 
 		# INIT #
 
@@ -81,7 +81,7 @@ class __MODULE_NAME: # I like to use the "__" & "_" prefix to distinguish classe
 
 		# text = "" # RESET
 
-		# text = input('What would you like to alternate: ') # This is the string to be alternated 
+		# text = input('What would you like to alternate: ') # This is the string to be alternated
 		# type(text) # User inputs a string to be alternated
 
 		# # Let's alternate THIS
@@ -91,7 +91,6 @@ class __MODULE_NAME: # I like to use the "__" & "_" prefix to distinguish classe
 		# print(_TEXT_MANAGER.alternateText(text)) # Print the alternated string in the terminal
 
 		text = input('What would you like to reverse: ')
-		type(text)
 
 		_TEXT_MANAGER.reverseText(text)
 		print(_TEXT_MANAGER.textOutput)
