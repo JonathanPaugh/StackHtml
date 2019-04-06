@@ -29,10 +29,17 @@
 
 				<div class="row h-100 justify-content-center align-items-center">
 
-					<div class="col-2">
-
+					<div class="col-4 text-center">
+						
+						<h1 class="display-1 p-2">Hey You!</h1>
+						
+						<p class="lead">Enter something in the input and get ready for the greatest experience of your entire life</p>
+						
 						<input class="input-text">
-
+						<br><!--THIS HAS GOT TO BE REMOVE I AINT ABOUT THAT LIFE-->
+						
+						<button type="button" class="btn btn-outline-primary btn-lg m-3">Send</button>
+						
 					</div>
 
 				</div>
@@ -53,8 +60,8 @@
 //IM AN INLINE SCRIPT LETS DO SOME JQUERY!
 	
 $(document).ready(function(){ // Activate jquery
-		alert("Hello, world!"); // Say hello world with javascript alert function (there is not point of jquery yet...)
-	  });
+	alert("Hello, world!"); // Say hello world with javascript alert function (there is not point of jquery yet...)
+});
 
 </script>
 
