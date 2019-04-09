@@ -74,13 +74,29 @@
 
 $(document).ready(function(){ // Activate jquery
 	
+	//INIT//
+	
+	//FUNCTIONS//
+	
+	$("#text_button1").click(function(){
+		var ret = "";
+		var s =	$(".input-text").val();
+		
+		for (var i = s.length; i >= 0; i--){ //Reverse string by decrementing from full length string
+			ret += s.charAt(i);
+		}
+		
+		$(".input-text").val(ret); //Set field to return
+	});
+	
 	$("#text_button2").click(function(){ //Jquery function to animate
 		animate();
 	});
+	
 });
 	
 //FUNCTIONS (AND VARIABLES)	OUTSIDE THE JQUERY CALL ARE SCOPED TO THE ENITRE DOCUMENT (VARIABLES CAN ONLY BE ACCESSED AFTER DECLARED THOUGH)
-var animate = function() {
+var animate = function(){
 	$("#text_content").animate({"left": "-50%"}, 1000);
 	$("#text_content").animate({"left": "50%"}, 1000, animate);
 }
