@@ -7,3 +7,7 @@
 .section-text {
 	height: 100vh;
 }
+
+.game-object {
+	border-width: 2px!important;
+}
