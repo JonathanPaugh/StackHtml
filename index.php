@@ -7,7 +7,6 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/assets/php/session.php");
 require_once($_SERVER["DOCUMENT_ROOT"]."/assets/php/account.php");
 
 ?>
-
 <!--INDEX.HTML-->
 
 <!DOCTYPE html>
