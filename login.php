@@ -51,7 +51,7 @@ require_once($_SERVER["DOCUMENT_ROOT"]."/assets/php/session.php");
 						<input class="input-login" name="input-login">
 						<br><!--THIS HAS GOT TO BE REMOVE I AINT ABOUT THAT LIFE-->
 
-						<button class="btn btn-outline-primary btn-lg m-3" id="login_button" type="button" action="/assets/php/login.php">Login</button>
+						<button class="btn btn-outline-primary btn-lg m-3" id="login_button" type="button" action="/assets/php/validateLogin.php">Login</button>
 						<br><!--THIS HAS GOT TO BE REMOVE I AINT ABOUT THAT LIFE-->
 
 					</div>
