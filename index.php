@@ -100,6 +100,8 @@ $(document).ready(function(){ // Activate jquery
 	$("#game_sky").hide();
 
 	// FUNCTIONS //
+	
+	// Game Functions
 
 	function initGame(){
 		_GAME_RUN = false;
@@ -161,6 +163,8 @@ $(document).ready(function(){ // Activate jquery
 			}
 		}
 	});
+	
+	// Button Clicks
 
 	$("#text_button1").click(function(){
 		var ret = "";
@@ -229,7 +233,7 @@ function animateRight(object, position, speed){
 	p += 50; // Now on a scale (0 to 100)
 	p *= 10; // Now on a scale (0 to 1000)
 	p -= 1000;        // Reverse
-	p = Math.abs(p);  // Scale
+	p = Math.abs(p);  // Scale (1000 to 0)
 
 	$(object).animate({"left": "50%"}, p/s);
 	$(object).animate({"left": "-50%"}, 1000/s, function(){animateRight(object, -50, s)});
